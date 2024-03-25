@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Float</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        border: 2px solid grey;
+        margin-bottom: 2em;
+        padding: 2em;
+        height: 300px;
+      }
+
+      .box {
+        width: 150px;
+        height: 200px;
+        padding: 1em;
+        margin-right: 2em;
+      }
+
+      .normal-box {
+        background-color: cornsilk;
+        border: 2px solid blue;
+        color: blue;
+      }     
+
+      .floating-box {
+        background-color: lightpink;
+        border: 2px solid darkred;
+        color: darkred;
+        float: right;
+        width: 500px;
+      }
+
+      li {
+        font-size: 1.5em;
+        line-height: 1.5;
+      }
+
+      code {
+        color: darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simple Float Example</h1>
+    <div class="wrapper">
+      <div class="box normal-box"><span>Normal Box</span></div>
+      <ul>
+        <li>Content follows the normal flow.
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div class="box floating-box"><span>Box floating to the right</span></div>
+      <ul>
+        <li>This text flows around the preceding box (in the normal flow) if the <code>float</code> property of the box is set to <code>left</code> or <code>right</code></li>
+        <li>Default value of <code>float</code> property is <code>none</code></li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Styling Images</title>
+
+  <style>
+    .wrapper-div {
+      border: 2px solid black;
+      margin: 10px 0;
+    }
+
+    .img-div {
+      width: 300px;
+      height: 200px;
+      border: 2px solid blue;
+      margin: 20px;
+      display: inline-block;
+    }
+
+    .max-width-img img{
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .object-fit img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .object-fit-cover img {
+      object-fit: cover;
+    }
+
+    .object-fit-contain img {
+      object-fit: contain;
+    }
+
+    .object-fit-fill img {
+      object-fit: fill;
+    }
+
+    p {
+      color: blue;
+      /* display: inline-block; */
+    }
+
+    .highlighted-text {
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper-div">
+    <p>Image set with <span class="highlighted-text">max-width : 100%</span> and <span class="highlighted-text">max-height: 100%</span>doesn't overflow</p>
+    <div class="img-div max-width-img">
+      <img src="rebel-125522-01.jpg" alt="rebel movie poster with max size set">
+    </div>
+  </div>
+  <div class="wrapper-div">
+    <p>Image with intrinsic size overflows the box.</p>
+    <div class="img-div intrinsic-img">
+      <img src="rebel-125522-01.jpg" alt="rebel movie poster">
+    </div>
+  </div>
+  <div class="wrapper-div">
+    <p>Image sized with <span class="highlighted-text">object fit: cover</span>. Maintains the aspect-ratio of the image. However, some portions of the image get cropped.</p>
+    <p><span class="highlighted-text">Note: </span>Using object-fit requires height and widht of the image to be defined.</p>
+    <div class="img-div object-fit-cover object-fit">
+      <img src="rebel-125522-01.jpg" alt="image sized with object-fit: cover">
+    </div>
+  </div>
+  <div class="wrapper-div">
+    <p>Image sized with <span class="highlighted-text">object-fit: contain</span>. aspect-ratio is maintained without cropping. Might leave empty space.</p>
+    <div class=" img-div object-fit object-fit-contain">
+      <img src="rebel-125522-01.jpg" alt="image sized with object-fit: contain">
+    </div>
+  </div>
+  <div class="wrapper-div">
+    <p>Image sized using <span class="highlighted-text">object-fit: fill</span>. aspect-ratio is not maintained, but the full image is within the box.</p>
+    <div class="img-div object-fit object-fit-fill">
+      <img src="rebel-125522-01.jpg" alt="image sized using objct-fit: fill">
+    </div>
+  </div>
+</body>
+</html>
