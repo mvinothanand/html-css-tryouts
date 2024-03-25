@@ -19,11 +19,22 @@
 
       .col-count {
         column-count: 5;
+        column-gap: 50px;
       }
 
       code {
         color: blue;
         font-weight: bold;
+      }
+
+      p {
+        border-width: 1px;
+        border-style: dotted;
+        border-color: darkolivegreen;
+        background-color: aquamarine;
+        padding: 0.25em;
+        line-height: 1.25;
+        font-size: 1em;
       }
     </style>
   </head>
@@ -53,7 +64,7 @@
 
     <div class="container col-count">
       <h1>Multi-Column Layout</h1>
-      <p><code>column-count: 5;</code></p>
+      <p><code>column-count: 5; column-gap: 50px</code></p>
       <p>
         <code>Paragraph 1</code>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
