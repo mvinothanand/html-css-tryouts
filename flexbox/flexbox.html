@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Flexbox</title>
+    <!-- Embeding the stylesheet -->
+    <link rel="stylesheet" href="flexbox.css">
+  </head>
+  <body>
+    <header>
+      <h1>CSS Flexbox</h1>
+      <p>
+        <strong>Flexbox</strong> is a <em>one dimensional</em> layout method, 
+        for arranging items in <em>rows</em> and <em>columns</em>. Items <em>flex</em> (stretch/shrink) to fit in the available space.
+      </p>
+      <ol>
+        <li><a href="#terminologies">Terminologies</a></li>
+        <li><a href="#sec-flex-direction">Flex Direction</a></li>
+        <li><a href="#sec-flex-wrap">Flex Wrap</a></li>
+        <li><a href="#sec-flex-items-sizing">Sizing Flex Items</a></li>
+        <li><a href="#sec-aligning">Aligning Flex Items</a></li>
+      </ol>
+    </header>
+    <section id="terminologies">
+      <h1>Flexbox - Terms</h1>
+      <img src="./flex_terms.png" alt="key flexbox module concepts">
+      <p><em>Source: MDN > CSS > CSS layout > Flexbox</em></p>
+    </section>
+    <section id="sec-flex-direction">
+      <h1>Flex Direction</h1>
+      <p>Value of <code>flex-direction</code> property decides the direction in which the flex items are laid out.</p>
+      <h3>flex-direction: row</h3>
+      <p><strong>row</strong> is the default flex direction. The items are laid out in the same direction as the writing mode for the language.</p>
+      <div class="flex-container">
+        <code class="label label-lt">flex-direction: row</code>
+        <p class="flex-item">
+          <strong>Flex Item 1</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.            
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 2</strong>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.            
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 3</strong>
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </p>
+      </div>
+      <div class="flex-container flexdir-col">
+        <code class="label label-lt">flex-direction: column</code>
+        <p class="flex-item">
+          <strong>Flex Item 1</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.            
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 2</strong>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.            
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 3</strong>
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </p>
+      </div>
+      <div class="flex-container flexdir-row-reverse">
+        <code class="label label-lt">flex-direction: row-reverse</code>
+        <strong class="label label-rt">Note that the items are ordered in reverse.</strong>
+        <p class="flex-item">
+          <strong>Flex Item 1</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.            
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 2</strong>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.            
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 3</strong>
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </p>
+      </div>       
+      <div class="flex-container flexdir-col-reverse">
+        <code class="label label-lt">flex-direction: column-reverse</code>
+        <strong class="label label-rt">Note that the items are ordered in reverse.</strong>
+        <p class="flex-item">
+          <strong>Flex Item 1</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.            
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 2</strong>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.            
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 3</strong>
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </p>
+      </div>        
+    </section>
+    <section id="sec-flex-wrap">
+      <h1>Flex Wrap</h1>
+      <p>If <code>flex-wrap</code> is set to <code>wrap</code>, flex items that cannot be accomodated in the available space in the flex direction without overflowing will move in to the next line.</p>
+      <div class="flex-container">
+        <code class="label label-lt">flex-direction: row;</code>
+        <strong class="label label-rt">No Wrap</strong>
+        <p class="flex-item">
+          <strong>Flex Item 1</strong>
+          This is a flex item with some text.
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 2</strong>
+          This is a flex item with some text.                
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 3</strong>
+          This is a flex item with some text.
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 4</strong>
+          This is a flex item with some text.
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 5</strong>
+          This is a flex item with some text.
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 6</strong>
+          This is a flex item with some text.
+        </p>
+      </div>          
+      <div class="flex-container flex-wrap">
+        <code class="label label-lt">flex-direction: row; flex-wrap: wrap;</code>
+        <strong class="label label-rt">Wrap is set for this container. Compare by reducing the viewport.</strong>
+        <p class="flex-item">
+          <strong>Flex Item 1</strong>
+          This is a flex item with some text.
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 2</strong>
+          This is a flex item with some text.                
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 3</strong>
+          This is a flex item with some text.
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 4</strong>
+          This is a flex item with some text.
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 5</strong>
+          This is a flex item with some text.
+        </p>
+        <p class="flex-item">
+          <strong>Flex Item 6</strong>
+          This is a flex item with some text.
+        </p>
+      </div>    
+      <div>
+        <p><strong>NOTE: </strong>A shorthand property <code>flex-flow</code> shall be used combining <code>flex-direction</code> and <code>flex-wrap</code></p>
+      </div>      
+    </section>
+    <section id="sec-flex-items-sizing">
+      <h1>Sizing the flex items</h1>
+      <article>
+        <p>
+          The <code>flex</code> CSS property shall be set on the flex items to control the sizing.
+          It is a shorthand of <code>flex-grow</code>, <code>flex-shrink</code> and <code>flex-basis</code> properties.
+        </p>
+        <p>
+          <strong>flex-grow</strong>: 
+          A unitless value to tell flexbox 
+          container how much proportion of the available space the flex 
+          item should occupy.
+        </p>
+        <p>
+          <strong>flex-shrink</strong>:
+          An unitless proportion value which defines how much a flex item 
+          can shrink to avoid overflow.
+        </p>
+        <p>
+          <strong>flex-basis</strong>:
+          Minimum size of the flex item in measuring units.
+        </p>
+      </article>
+      <article class="flex-container">
+        <code class="label label-lt">flex-direction: row;</code>
+        <strong class="label label-rt">No Wrap</strong>
+        <p class="flex-item flex-item-1">
+          <strong>Flex Item 1</strong>
+          This is a flex item with <code>flex: 1;</code>
+        </p>
+        <p class="flex-item flex-item-1" >
+          <strong>Flex Item 2</strong>
+          This is a flex item with <code>flex: 1;</code>               
+        </p>
+        <p class="flex-item flex-item-2">
+          <strong>Flex Item 3</strong>
+          This is a flex item with <code>flex: 2;</code>
+          <em>Has the width twice that of an item with <code>flex: 1</code></em>
+        </p>
+        <p class="flex-item flex-item-1">
+          <strong>Flex Item 4</strong>
+          This is a flex item with <code>flex: 1;</code>
+        </p>
+        <p class="flex-item flex-item-1">
+          <strong>Flex Item 5</strong>
+          This is a flex item with <code>flex: 1;</code>
+        </p>
+        <p class="flex-item flex-item-2">
+          <strong>Flex Item 6</strong>
+          This is a flex item with <code>flex: 2;</code>
+          <em>Has the width twice that of an item with <code>flex: 1</code></em>
+        </p>
+      </article>
+      <article class="flex-container">
+        <code class="label label-lt">flex-direction: row;</code>
+        <strong class="label label-rt">No Wrap</strong>
+        <div class="flex-item flex-item-1-100">
+          <p><strong>Flex Item 1</strong></p>
+          <p>
+            This is a flex item with <code>flex: 1 100px;</code>
+          </p>
+          <p>
+            Will have a min width of 100px. If the available space is more, then the width will be 1 proportion.
+          </p>
+        </div>
+        <div class="flex-item flex-item-1-300">
+          <p>
+            <strong>Flex Item 2</strong>
+          </p>
+          <p>
+            This is a flex item with <code>flex: 1 300px;</code>               
+          </p>
+          <p>
+            Will have a min width of 300px or 1 proportion calculated based on the available space whichever is higher.
+          </p>
+        </div>
+        <div class="flex-item flex-item-2">
+          <p>
+            <strong>Flex Item 3</strong>
+          </p>
+          <p>
+            This is a flex item with <code>flex: 2;</code>
+          </p>
+          <p>
+            Has the width twice that of an item with <code>flex: 1</code>
+          </p>
+        </div>
+        <div class="flex-item flex-item-1">
+          <p>
+            <strong>Flex Item 4</strong>
+          </p>
+          <p>
+            This is a flex item with <code>flex: 1;</code>
+          </p>
+        </div>
+        <div class="flex-item flex-item-1-100">          
+          <p>
+            <strong>Flex Item 5</strong>
+          </p>
+          <p>
+            This is a flex item with <code>flex: 1 100px;</code>
+          </p>
+          <p>
+            width = 100px or 1 proportion of the available space whichever is higher.
+          </p>
+        </div>
+        <div  class="flex-item flex-item-2">
+          <p>
+            <strong>Flex Item 6</strong>
+          </p>
+          <p>
+            This is a flex item with <code>flex: 2;</code>
+          </p>
+          <p>
+            Has the width twice that of an item with <code>flex: 1</code>
+          </p>
+        </div>
+      </article>      
+      <article class="flex-container flex-wrap">
+        <code class="label label-lt">flex-direction: row; flex-wrap: wrap;</code>
+        <strong class="label label-rt">Wrap</strong>
+        <div class="flex-item flex-item-1-100">
+          <p><strong>Flex Item 1</strong></p>
+          <p>
+            This is a flex item with <code>flex: 1 100px;</code>
+          </p>
+          <p>
+            Will have a min width of 100px. If the available space is more, then the width will be 1 proportion.
+          </p>
+        </div>
+        <div class="flex-item flex-item-1-300">
+          <p>
+            <strong>Flex Item 2</strong>
+          </p>
+          <p>
+            This is a flex item with <code>flex: 1 300px;</code>               
+          </p>
+          <p>
+            Will have a min width of 300px or 1 proportion calculated based on the available space whichever is higher.
+          </p>
+        </div>
+        <div class="flex-item flex-item-2">
+          <p>
+            <strong>Flex Item 3</strong>
+          </p>
+          <p>
+            This is a flex item with <code>flex: 2;</code>
+          </p>
+          <p>
+            Has the width twice that of an item with <code>flex: 1</code>
+          </p>
+        </div>
+        <div class="flex-item flex-item-1">
+          <p>
+            <strong>Flex Item 4</strong>
+          </p>
+          <p>
+            This is a flex item with <code>flex: 1;</code>
+          </p>
+        </div>
+        <div class="flex-item flex-item-1-100">          
+          <p>
+            <strong>Flex Item 5</strong>
+          </p>
+          <p>
+            This is a flex item with <code>flex: 1 100px;</code>
+          </p>
+          <p>
+            width = 100px or 1 proportion of the available space whichever is higher.
+          </p>
+        </div>
+        <div  class="flex-item flex-item-2">
+          <p>
+            <strong>Flex Item 6</strong>
+          </p>
+          <p>
+            This is a flex item with <code>flex: 2;</code>
+          </p>
+          <p>
+            Has the width twice that of an item with <code>flex: 1</code>
+          </p>
+        </div>
+      </article>         
+    </section>
+    <section id="sec-aligning">
+      <h1>Aligning Flex Items</h1>
+      <article>
+        <p>
+          <strong>align-items</strong>:
+          To align items along the <em>cross-axis</em>. Applied on the <em>flex-container</em>.
+        </p>
+        <p>
+          <strong>align-self</strong>:
+          To control alignment in the <em>cross-axis</em> applied on the <em>flex item</em>.
+        </p>
+        <p>
+          <strong>justify-content</strong>:
+          To control alignment in the <em>main-axis</em> applied on the <em>flex container</em>.
+        </p>
+      </article>
+      <h2>Aligning Flex Items in the cross-axis</h2>
+      <article class="flex-container">
+        <code class="label label-lt">align-items: stretch;</code>
+        <div class="flex-item button">
+          <p>HTML</p>
+        </div>
+        <div class="flex-item button">
+          <p>CSS</p>
+        </div>
+        <div class="flex-item button">
+          <p>JavaScript</p>
+        </div>
+        <div class="flex-item button">
+          <p>
+            React
+          </p>
+        </div>
+        <div class="flex-item description">
+          <p>
+            <code>align-items</code> property has a default value of <code>stretch</code>.
+          </p>
+          <p>
+            <code>stretch</code> adjusts all the flex items to be of same size in the <em>cross-axis</em>.
+            The size of each of the flex item is increased to be same as that of the largest item based on 
+            the intrinsic size.
+          </p>
+        </div>
+      </article>
+      <article class="flex-container flex-align-center">
+        <code class="label label-lt">align-items: center;</code>
+        <div class="flex-item button">
+          <p>HTML</p>
+        </div>
+        <div class="flex-item button">
+          <p>CSS</p>
+        </div>
+        <div class="flex-item button">
+          <p>JavaScript</p>
+        </div>
+        <div class="flex-item button">
+          <p>
+            React
+          </p>
+        </div>
+        <div class="flex-item description">
+          <p>
+            <code>align-items</code> property set to <code>center</code>.
+          </p>
+          <p>
+            All the flex items align to the center of <em>cross-axis</em>.
+            Intrinsic size of the item is maintained.
+          </p>
+        </div>
+      </article>
+      <article class="flex-container" id="flex-align-start">
+        <code class="label label-lt">align-items: flex-start;</code>
+        <div class="flex-item button">
+          <p>HTML</p>
+        </div>
+        <div class="flex-item button">
+          <p>CSS</p>
+        </div>
+        <div class="flex-item button">
+          <p>JavaScript</p>
+        </div>
+        <div class="flex-item button">
+          <p>
+            React
+          </p>
+        </div>
+        <div class="flex-item description">
+          <p>
+            <code>align-items</code> property set to <code>flex-start</code>.
+          </p>
+          <p>
+            All the flex items align to start of <em>cross-axis</em>.
+            Intrinsic size of the item is maintained.
+          </p>
+        </div>
+      </article>
+      <article class="flex-container" id="flex-align-end">
+        <code class="label label-lt">align-items: flex-end;</code>
+        <div class="flex-item button">
+          <p>HTML</p>
+        </div>
+        <div class="flex-item button">
+          <p>CSS</p>
+        </div>
+        <div class="flex-item button">
+          <p>JavaScript</p>
+        </div>
+        <div class="flex-item button">
+          <p>
+            React
+          </p>
+        </div>
+        <div class="flex-item description">
+          <p>
+            <code>align-items</code> property set to <code>flex-end</code>.
+          </p>
+          <p>
+            All the flex items align to end of <em>cross-axis</em>.
+            Intrinsic size of the item is maintained.
+          </p>
+        </div>
+      </article>      
+      <article class="flex-container" id="flex-align-end">
+        <code class="label label-lt">align-items: flex-end; align-self: center;</code>
+        <div class="flex-item button">
+          <p>HTML</p>
+        </div>
+        <div class="flex-item button flex-item-align-center">
+          <p>CSS</p>
+        </div>
+        <div class="flex-item button">
+          <p>JavaScript</p>
+        </div>
+        <div class="flex-item button">
+          <p>
+            React
+          </p>
+        </div>
+        <div class="flex-item description">
+          <p>
+            <code>align-self</code> property set to <code>center</code> for the <em>CSS</em> flex item alone.
+          </p>
+          <p>
+            <code>align-self</code> overrides the <code>align-items</code> value at the container level.
+          </p>
+        </div>
+      </article>      
+      <h2>Aligning flex items in the main-axis</h2>   
+      <article class="flex-container">
+        <code class="label label-lt">justify-content: flex-start;</code>
+        <div class="flex-item button">
+          <p>HTML</p>
+        </div>
+        <div class="flex-item button">
+          <p>CSS</p>
+        </div>
+        <div class="flex-item button">
+          <p>JavaScript</p>
+        </div>
+        <div class="flex-item button">
+          <p>
+            React
+          </p>
+        </div>
+        <div class="flex-item description">
+          <p>
+            <code>justify-content</code> property has a default value of <code>flex-start</code>.
+          </p>
+          <p>
+            All the flex items align to the start of the <em>main-axis</em>.
+          </p>
+        </div>
+      </article>
+      <article class="flex-container" id="flex-justify-end">
+        <code class="label label-lt">justify-content: flex-end;</code>
+        <div class="flex-item button">
+          <p>HTML</p>
+        </div>
+        <div class="flex-item button">
+          <p>CSS</p>
+        </div>
+        <div class="flex-item button">
+          <p>JavaScript</p>
+        </div>
+        <div class="flex-item button">
+          <p>
+            React
+          </p>
+        </div>
+        <div class="flex-item description">
+          <p>
+            <code>justify-content</code> property set to <code>flex-end</code>.
+          </p>
+          <p>
+            All the flex items align to the end of the <em>main-axis</em>.
+          </p>
+        </div>
+      </article>      
+      <article class="flex-container" id="flex-justify-space-around">
+        <code class="label label-lt">justify-content: space-around;</code>
+        <div class="flex-item button">
+          <p>HTML</p>
+        </div>
+        <div class="flex-item button">
+          <p>CSS</p>
+        </div>
+        <div class="flex-item button">
+          <p>JavaScript</p>
+        </div>
+        <div class="flex-item button">
+          <p>
+            React
+          </p>
+        </div>
+        <div class="flex-item description">
+          <p>
+            <code>justify-content</code> property set to <code>space-around</code>.
+          </p>
+          <p>
+            All the flex items are spread along the <em>main-axis</em> with equal spaces all around.
+          </p>
+        </div>
+      </article>         
+      <article class="flex-container" id="flex-justify-space-between">
+        <code class="label label-lt">justify-content: space-between;</code>
+        <div class="flex-item button">
+          <p>HTML</p>
+        </div>
+        <div class="flex-item button">
+          <p>CSS</p>
+        </div>
+        <div class="flex-item button">
+          <p>JavaScript</p>
+        </div>
+        <div class="flex-item button">
+          <p>
+            React
+          </p>
+        </div>
+        <div class="flex-item description">
+          <p>
+            <code>justify-content</code> property set to <code>space-between</code>.
+          </p>
+          <p>
+            All the flex items are spread along the <em>main-axis</em> without any space at start and end. 
+            In between the items the spaces are equally spread.
+          </p>
+        </div>
+      </article>             
+    </section>
+  </body>
+</html>

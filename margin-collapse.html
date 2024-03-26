@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Margin Collapsing</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    code {
+      color: blue;
+      font-size: 0.75em;
+      font-weight: bold;
+    }
+
+    .highlighted-text {
+      color: red;
+      margin: 40px auto;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.5em;
+      border: 1px solid grey;
+      padding: 5px;
+    }
+
+    .thirty-px-margin {
+      margin: 30px auto;
+    }
+
+    .ten-px-margin {
+      margin: 10px auto;
+    }
+
+    .title {
+      color: green;
+      font-weight: bold;
+      margin: 50px auto;
+      background-color: seashell;
+      padding: 10px;
+    }
+
+    span {
+      margin: 60px 30px;
+      font-size: 1.5em;
+      border: 1px solid blue;
+      padding: 5px;
+    }
+
+    .note {
+      margin: 20px auto;
+      color: brown;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <p class="title">Margin Collapsing: In the vertical direction, the smaller of the adjacent margins merge with the larger.</p>
+    <p class="thirty-px-margin"><code>Line 1:</code>This is a block <code>&lt;p&gt;</code> element with <code>margin: 30px auto</code></p>
+    <p class="ten-px-margin"><code>Line 2:</code>This is a block <code>&lt;p&gt;</code> element with <code>margin: 10px auto;</code> set.</p>
+    <p>The bottom and top margins of <code>line 1</code> and <code>line 2</code> collapses and the larger bottom margin of <code>line 1</code>, <code>30px</code> remains between them.</p>
+    <p class="highlighted-text">Verify this using the developer tools.</p>
+    <span>This is an <code>inline</code> element.</span >
+    <span>This is also an <code>inline</code> element.</span >
+    <p class="highlighted-text">Note: margin <code>top</code> and <code>bottom</code> are not applicable for <code>inline</code> elements.
+      Hence, the previous/next <code>block</code> or <code>inline-block</code> element's margin top/bottom gets applied.
+    </p>
+  </div>
+</body>
+</html>

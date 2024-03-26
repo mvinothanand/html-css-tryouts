@@ -1,0 +1,154 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+strong,
+em {
+  color: blue;
+}
+
+header,
+section {
+  border-bottom: 1px solid red;
+  margin-bottom: 2em;
+}
+
+code {
+  color: blue;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+article {
+  border: 2px solid grey;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 2em auto 3em auto;
+}
+
+/* Styling the section with image */
+section img {
+  text-align: center;
+}
+
+/* Styling for the labels used */
+.label {
+  position: absolute;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0;
+  background-color: lightgreen;
+  color: red;
+  padding: 5px;
+}
+
+.label-lt {
+  top: 0;
+  left: 2em;
+}
+
+.label-rt {
+  top: 0;
+  right: 2em;
+}
+
+/* Flex container styling */
+.flex-container {
+  border: 2px solid grey;
+  padding: 10px;
+  display: flex;
+  border-radius: 5px;
+  position: relative;
+}
+
+div.flex-container {
+  margin: 2em auto 3em auto;
+}
+
+.flexdir-col {
+  flex-direction: column;
+}
+
+.flexdir-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flexdir-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+#flex-align-start {
+  align-items: flex-start;
+}
+
+#flex-align-end {
+  align-items: flex-end;
+}
+
+#flex-justify-end {
+  justify-content: flex-end;
+}
+
+#flex-justify-space-around {
+  justify-content: space-around;
+}
+
+#flex-justify-space-between {
+  justify-content: space-between;
+}
+
+div.flex-item-align-center {
+  align-self: center;
+}
+
+/* Flex items styling */
+.flex-item {
+  border: 1px solid lightsalmon;
+  margin: 30px 10px 10px 10px;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.flex-item code {
+  background-color: yellow;
+  padding: 0 2px;
+}
+
+.flex-item-1 {
+  flex: 1;
+}
+
+.flex-item-1-100 {
+  flex: 1 100px;
+}
+
+.flex-item-1-300 {
+  flex: 1 300px;
+}
+
+.flex-item-2 {
+  flex: 2;
+}
+
+.button {
+  background-color: yellow;
+  color: blue;
+  /* margin: 0.5em; */
+  text-align: center;
+}
+
