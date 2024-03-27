@@ -18,6 +18,7 @@
         <li><a href="#sec-flex-wrap">Flex Wrap</a></li>
         <li><a href="#sec-flex-items-sizing">Sizing Flex Items</a></li>
         <li><a href="#sec-aligning">Aligning Flex Items</a></li>
+        <li><a href="#sec-ordering">Ordering Flex Items</a></li>
       </ol>
     </header>
     <section id="terminologies">
@@ -586,5 +587,62 @@
         </div>
       </article>             
     </section>
+    <section id="sec-ordering">
+      <h1>Ordering Flex Items</h1>
+      <article>
+        <p>
+          <strong>order</strong>:
+          To control the order in which the flex items are to be arranged in the container.
+        </p>
+        <p>
+          Default value is "0" for all flex items.
+        </p>
+        <p>
+          Flex items that have higher order value will appear later. 
+          Items with same order values will appear in the source order.
+        </p>
+      </article>
+      <article class="flex-container" id="flex-ordering">
+        <div class="flex-item">
+          <p><strong>Source Order: 1</strong></p>
+          <p><strong>Flex Order: 1</strong></p>
+          <p>
+            Though appears first in source, flex <code>order: 1</code> is the highest.
+            So appears last.
+          </p>
+        </div>
+        <div class="flex-item">
+          <p><strong>Source Order: 2</strong></p>
+          <p><strong>Flex Order: 0</strong></p>
+          <p>
+            Has the 2nd highest flex order and has the lowest source order among other items of flex <code>order: 0</code>.
+            So appears 2nd in the flex direction.
+          </p>
+        </div>
+        <div class="flex-item">
+          <p><strong>Source Order: 3</strong></p>
+          <p><strong>Flex Order: 0</strong></p>
+          <p>
+            2nd lowest source order among items with same flex <code>order: 0</code>.
+          </p>
+        </div>
+        <div class="flex-item">
+          <p><strong>Source Order: 4</strong></p>
+          <p><strong>Flex Order: 0</strong></p>
+          <p>
+            3rd lowest source order among items with flex <code>order: 0</code>.
+          </p>
+        </div>
+        <div class="flex-item">
+          <p><strong>Source Order: 5</strong></p>
+          <p><strong>Flex Order: -1</strong></p>
+          <p>
+            Though the source order is highest, the flex <code>order: -1</code> is lowest.
+            So the item appears first in the flow direction.
+          </p>
+        </div>
+      </article>
+    </section>
+
   </body>
 </html>

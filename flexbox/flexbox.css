@@ -33,6 +33,16 @@ article {
   margin: 2em auto 3em auto;
 }
 
+h1,
+h2 {
+  color: rgb(236, 10, 97);
+}
+
+ol li {
+  line-height: 2em;
+}
+
+
 /* Styling the section with image */
 section img {
   text-align: center;
@@ -150,5 +160,13 @@ div.flex-item-align-center {
   color: blue;
   /* margin: 0.5em; */
   text-align: center;
+}
+
+#flex-ordering div:first-child {
+  order: 1;
+}
+
+#flex-ordering div:last-child {
+  order: -1;
 }
 
