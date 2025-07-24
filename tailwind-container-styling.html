@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Container Styling</title>
+</head>
+<body>
+    <h1 class="text-3xl font-bold underline">Hello!</h1>
+    <div class="border-1 w-92 grid grid-cols-[1fr_50px] p-1 gap-1 bg-gradient-to-r from-black-600 to-gray-500">
+        <div class="border-1 grid grid-rows-[50px]">
+            <span class="text-sm font-bold">Everything Everywhere all at once here here and there</span><span class="text-xs ml-1">[English Original]</span>
+        </div>
+        <div class="border-1 grid grid-rows-[30px_20px] pr-1">
+            <span class="text-sm text-right align-middle inline-block">UA7+</span>
+            <span class="text-xs text-right align-middle">2h 10m</span>
+        </div>
+    </div>
+    <div class="border-1 w-92 flex flex-col p-1 gap-1 bg-gradient-to-r from-black-600 from-10% via-gray-100 via-30% to-black-600 to-90%">
+        <div class="border-1 flex flex-row justify-between">
+            <p class="text-sm font-bold">Everything Everywhere all at once</p>
+            <p class="text-sm text-right align-middle inline-block">UA7+</p>
+        </div>
+        <div class="border-1 flex flex-row justify-between pr-1">
+            <span class="text-xs ml-1"></span>
+            <span class="text-xs text-right align-middle">2h 10m</span>
+        </div>
+    </div>
+
+</body>
+</html>
